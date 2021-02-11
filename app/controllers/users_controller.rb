@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
-    UserWorker.perform_async(@user)
+    UserWorker.perform_async(@user.name)
   end
 
   # GET /users/new
